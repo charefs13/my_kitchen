@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>My Kitchen - Main</title>
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <a href="./views/allrecipe.html">All recipes</a>
+            <form class="filterForm" method="GET">
+
+                <h4>Search by : </h4>
+
+                <label for="titleSearch">Title:</label>
+                <input id="titleSearch" name="title" type="text">
+
+                <label for="ingredientSearch">Ingredient:</label>
+                <input id="ingredientSearch" name="ingredient" type="text">
+
+                <label for="categorySearch">Category :</label>
+                <input id="categorySearch" name="category" type="text">
+                <button type="button" id="sendSearch">Rechercher</button>
+
+            </form>
+            <button id="disconnect">disconnect</button>
+
+        </nav>
+
+        <div><img src="../assets/images/logo.png" alt="logo du site : chapeau de cuisinier"></div>
+
+        <h1>Welcome to My Kitchen</h1>
+
+    </header>
+
+    <main>
+
+
+        <section id="addSection">
+
+             
+
+                <form id="sendForm" method="POST">
+                    <p class="close">Close</p>
+                    <label for="title">Title</label>
+                    <input name="title" id="title" type="text">
+
+                    <label for="ingredient">Ingredients</label>
+                    <textarea name="ingredient" id="ingredient"></textarea>
+
+                    <label for="instruction">Instructions</label>
+                    <textarea name="instruction" id="instruction"></textarea>
+
+                    <label for="preparationTime">Preparation Time (minutes):</label>
+                    <input type="number" id="preparationTime" name="preparationTime">
+
+                    <label for="cookingTime">Cooking Time (minutes):</label>
+                    <input type="number" id="cookingTime" name="cookingTime">
+
+                    <label for="difficulty">Difficulty</label>
+                    <select id="difficulty" name="difficulty">
+                        <option value="facile">facile</option>
+                        <option value="medium">medium</option>
+                        <option value="difficile">difficile</option>
+                    </select>
+
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="entree">entree</option>
+                        <option value="plat">plat</option>
+                        <option value="dessert">dessert</option>
+                    </select>
+                    <label for="status">Do you want to share your Recipe ?</label>
+                    <select id="status" name="status" required>
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+
+                    </select>
+                    <button type="button" id="saveNewRecipe">Enregistrer</button>
+                </form>
+
+        </section>
+
+        <section id="myRecipe">
+            <h3>All my recipes</h3>
+            <p class="open">Click to add a recipe</p>
+            <div id="allMyRecipe"></div>
+        </section>
+
+
+    </main>
+
+
+
+    <script src="./controller/script.js"></script>
+</body>
+
+</html>

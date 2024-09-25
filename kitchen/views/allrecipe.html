@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>My Kitchen - All Recipes</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">My Profile</a>
+            <form class="filterForm" method="GET">
+
+                <h4>Search by : </h4>
+
+                <label for="titleSearch">Title:</label>
+                <input id="titleSearch" name="title" type="text">
+
+                <label for="ingredientSearch">Ingredient:</label>
+                <input id="ingredientSearch" name="ingredient" type="text">
+
+                <label for="categorySearch">Category :</label>
+                <input id="categorySearch" name="category" type="text">
+                <button type="button" id="sendSearch">Rechercher</button>
+
+            </form>
+            <button id="disconnect">disconnect</button>
+           
+        </nav>
+
+        <div><img src="../assets/images/logo.png" alt="logo du site : chapeau de cuisinier"></div>
+
+        <h1>Welcome to My Kitchen</h1>
+    </header>
+
+    <main>
+
+        <section class="displaySection">
+
+            <h2>All recipes shared by the community </h2>
+
+      
+
+
+            <div id="recipeSection">
+
+            </div>
+
+        </section>
+
+
+    </main>
+</body>
+<script src="../controller/allrecipe.js"></script>
+
+</html>

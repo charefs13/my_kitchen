@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(65, 65, 65);
+    color: #c0c0c0;
+    text-align: center;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #b9b9b9;
+}
+
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+header img{
+    margin-top: 100px;
+    width: 80px;
+}
+
+h2,
+h3,
+h4 {
+    margin-bottom: 15px;
+    color: #b9b9b9;
+    
+}
+
+.description {
+    margin-bottom: 100px;
+    font-size: 25px;
+}
+
+.addSection {
+    margin: auto;
+    margin-left: 10px;
+
+}
+
+
+.hide {
+    display: none;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+h3,
+.filterForm {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h4 {
+    margin-top: 10px;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+button {
+    padding: 4px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    border: 0.5px solid rgb(189, 189, 189);
+
+}
+
+button:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+#recipeSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#allMyRecipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.newDiv {
+    border: 0px solid black;
+    width: 450px;
+    height: 300px;
+    padding: 50px;
+    margin-bottom: 50px;
+    border-radius: 3px;
+    transition: 0.8s ease;
+    overflow: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+
+
+}
+
+.newDiv:hover {
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+    cursor: pointer;
+
+}
+
+.newDiv h4 {
+    font-size: 18px;
+    color: #c6c6c6;
+}
+
+input,
+textarea {
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 0.5px solid rgb(189, 189, 189);
+
+}
+
+select {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#sendForm {
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    max-width: 500px;
+    padding: 25px;
+    margin: auto auto 100px auto;
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.close {
+    position: absolute;
+    top: 1px;
+    right: 90%;
+}
+
+.close:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.open:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.updateForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#disconnect {
+    border: none;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 250px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
+label {
+    margin: auto auto 5px auto;
+    color: #c6c6c6;
+}
+
+nav h4 {
+    font-size: 10px;
+    color: #b9b9b9;
+}
+
+nav input {
+    padding: 3px 10px;
+    margin: 2px;
+    border-radius: 5px;
+
+}
+
+nav p {
+    margin-bottom: 5px;
+    color: #b9b9b9;
+    
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 2%;
+    right: 50%;
+    left: 50%;
+
+}
+
+
+
+footer p {
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+        /* Réduit la taille de l'en-tête sur les petits écrans */
+    }
+
+    .description {
+        font-size: 20px;
+        /* Réduit la taille de la description */
+    }
+
+    button {
+        padding: 10px;
+        /* Augmente le padding pour une meilleure accessibilité */
+        font-size: 16px;
+        /* Augmente la taille du texte du bouton */
+    }
+
+    input,
+    textarea {
+        font-size: 16px;
+        /* Augmente la taille du texte des inputs et textarea */
+        padding: 10px;
+        /* Augmente le padding pour une meilleure accessibilité */
+    }
+
+    #recipeSection {
+        flex-direction: column;
+        /* Change la direction en colonne sur petits écrans */
+        align-items: center;
+        /* Centre les éléments */
+    }
+
+    .newDiv {
+        width: 90%;
+        /* Ajuste la largeur pour les petits écrans */
+        height: auto;
+        /* Permet à la hauteur de s'ajuster automatiquement */
+        padding: 20px;
+        /* Réduit le padding */
+    }
+
+    nav {
+        flex-direction: column;
+        /* Change la direction de la navigation en colonne */
+        align-items: center;
+        /* Centre les éléments de navigation */
+        gap: 20px;
+        /* Ajuste l'espacement */
+    }
+
+    nav h4 {
+        font-size: 10px;
+        /* Ajuste la taille du texte dans le menu de navigation */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+        /* Réduit encore plus la taille de l'en-tête sur très petits écrans */
+    }
+
+    button {
+        font-size: 10px;
+        /* Réduit la taille du texte du bouton */
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+        /* Réduit la taille du texte des inputs et textarea */
+
+    }
+
+    .newDiv {
+        padding: 10px;
+        /* Réduit encore le padding pour les très petits écrans */
+    }
+
+    #allMyRecipe {
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+        /* Taille de texte réduite pour les mobiles */
+        margin-top: 30px;
+        /* Ajustement des marges */
+        margin-bottom: 50px;
+    }
+
+    h2,
+    h3,
+    h4 {
+        font-size: 18px;
+        /* Ajustement des tailles de texte des titres */
+    }
+
+    .description {
+        font-size: 16px;
+        /* Réduction de la taille du texte de la description */
+    }
+
+    button {
+        padding: 10px 15px;
+        /* Augmentation du padding pour un meilleur accès */
+        font-size: 14px;
+        /* Ajustement de la taille de texte pour les boutons */
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+        /* Ajustement de la taille de texte des inputs et des textareas */
+        padding: 10px;
+        /* Augmentation du padding pour les champs de saisie */
+        width: 90%;
+        /* Utilisation d'une largeur maximale pour les champs */
+    }
+
+    #recipeSection {
+        flex-direction: column;
+        /* Changer la direction à colonne */
+        align-items: stretch;
+        /* Permet d'étirer les éléments */
+        gap: 20px;
+        /* Ajuste l'espace entre les éléments */
+    }
+
+    .newDiv {
+        width: 90%;
+        /* Utilise 90% de la largeur pour les divs */
+        height: auto;
+        /* Ajuste la hauteur automatiquement */
+        padding: 15px;
+        /* Réduction du padding */
+        margin: 0 auto;
+        /* Centrage des divs */
+    }
+
+    nav {
+        flex-direction: column;
+        /* Change la direction de la navigation en colonne */
+        align-items: center;
+        /* Centre les éléments de navigation */
+        gap: 15px;
+        /* Ajuste l'espacement */
+    }
+
+    nav h4 {
+        font-size: 12px;
+        /* Ajustement de la taille du texte dans le menu de navigation */
+    }
+
+    footer p {
+        font-size: 12px;
+        /* Réduction de la taille de texte dans le footer */
+    }
+
+    footer img {
+        width: 25px;
+        /* Ajustement de la taille des icônes */
+        height: 25px;
+        /* Ajustement de la taille des icônes */
+    }
+}
